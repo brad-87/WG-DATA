@@ -1,0 +1,14 @@
+.git
+.gitignore
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+
+my_config.yaml
+*.secret.yaml
+
+keys/*
+!keys/README.md

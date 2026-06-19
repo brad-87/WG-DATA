@@ -1,0 +1,20 @@
+# Real config / secrets
+my_config.yaml
+*.secret.yaml
+
+# SSH keys
+keys/*
+!keys/
+!keys/README.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Environment files
+.env

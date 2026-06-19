@@ -1,0 +1,36 @@
+ssh:
+  host: 1.2.3.4 # VPN Server
+  port: 22
+  user: wg-monitor # Monitor username on the VPN server
+  key_file: keys/wg-monitor-key # The ssh private key for the monitor user to login to the VPN server
+
+
+mqtt:
+  enabled: false
+  display_output: false
+  discovery_enabled: true
+  discovery_prefix: homeassistant
+  topic_prefix: wg-mqtt-data
+
+  host: 192.168.1.50 # Mqtt broker address
+  port: 1883
+  
+  username: mqtt-user
+  password: mqtt-password
+  
+  
+
+wireguard:
+  display_output: false
+  command: sudo -n /usr/local/sbin/wg-status-readonly
+  poll_seconds: 600
+  active_seconds: 300 # If handshake within the last [active_seconds] then peer is online
+
+
+peer_names:
+# [Device VPN IP Address] : [VPN client description]
+  "1.2.3.5": "SITE-Home"
+  "1.2.3.6": "SITE-Work"
+  "1.2.3.10": "PEER-Phone"
+  "1.2.3.11": "PEER-Tablet"
+  "1.2.3.12": "PEER-Laptop"
