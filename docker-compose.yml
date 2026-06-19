@@ -5,5 +5,5 @@ services:
     restart: unless-stopped
 
     volumes:
-      - /opt/wg-data/my_config.yaml:/app/config.yaml:ro
+      - /opt/wg-data/config.yaml:/app/config.yaml:ro
       - /opt/wg-data/keys:/app/keys:ro
