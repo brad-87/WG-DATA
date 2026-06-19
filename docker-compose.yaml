@@ -1,9 +1,9 @@
 services:
-  wg-monitor:
+  wg-data:
     build: .
-    container_name: wg-monitor
+    container_name: wg-data
     restart: unless-stopped
 
     volumes:
-      - /opt/wg-monitor/my_config.yaml:/app/my_config.yaml:ro
-      - /opt/wg-monitor/keys:/app/keys:ro
+      - /opt/wg-data/my_config.yaml:/app/config.yaml:ro
+      - /opt/wg-data/keys:/app/keys:ro
